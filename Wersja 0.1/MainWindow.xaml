@@ -1,0 +1,40 @@
+﻿<Window x:Class="Repair_Spooler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RepairSpooler" Height="300" Width="350" 
+        ResizeMode="CanMinimize" 
+        Icon="/ikona1.ico" >
+    <Grid>
+        <TabControl>
+            <TabItem Header="Podstawowe">
+                <Grid>
+                    <TextBlock HorizontalAlignment="Left" Height="36" Margin="78,36,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="Przyciśnij przycisk aby wykonać autonaprawę: " VerticalAlignment="Top" Width="161"/>
+                    <Button Content="Napraw" HorizontalAlignment="Left" Margin="98,104,0,0" VerticalAlignment="Top" Width="124" Click="AutoNaprawa_Click" Height="37" FontSize="18" />
+                    
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Zaawansowane">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="41*"/>
+                        <ColumnDefinition Width="297*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Reset" HorizontalAlignment="Left" Margin="191,109,0,0" VerticalAlignment="Top" Width="75" Click="Reset_Click" Grid.Column="1"/>
+                    <Button Content="Stop" HorizontalAlignment="Left" Margin="191,152,0,0" VerticalAlignment="Top" Width="75" Click="Stop_Click" Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Height="20" Margin="7,109,0,0" TextWrapping="Wrap" Text="Włącz lub zrestartuj usługę:" VerticalAlignment="Top" Width="161" Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Height="20" Margin="7,152,0,0" TextWrapping="Wrap" Text="Wyłącz usługę:" VerticalAlignment="Top" Width="161" Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="7,40,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="Za pomocą poniższych klawiszy możesz przywrócić sprawność usługi drukowania:" VerticalAlignment="Top" Height="51" Width="259" Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="7,191,0,0" TextWrapping="Wrap" Text="Wyczyść Bufor Wydruku:" VerticalAlignment="Top" RenderTransformOrigin="1.245,0.062" Width="161" Height="20" Grid.Column="1"/>
+                    <Button Content="Wyczyść" HorizontalAlignment="Left" Margin="191,191,0,0" VerticalAlignment="Top" Width="75" Click="Wyczyść_Click" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="O Programie">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Left" Text="&#09;&#09;RepairSpooler&#x0a;&#09;to program freeware do zarządzania &#09;Buforem wydruku systemu Windows.&#x0a; &#x0a;&#09;&#09;Wersja 1.2 &#x0a;&#x0a;&#09;&#09;Polonia Pavlus.&#x0a;&#x0a;&#09;Data kompilacji - 16 listopada 2018 roku.&#x0a;&#x0a;&#09;W programie wykorzystano plik ikony na &#09;licencji Creative Commons: &#x0a;&#09;http://www.aha-soft.com " Margin="10,14,47,7" RenderTransformOrigin="0.481,0.748"/>
+            </TabItem>
+
+
+        </TabControl>
+    </Grid>
+</Window>
